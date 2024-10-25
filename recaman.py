@@ -1,8 +1,6 @@
 def recaman_sequence(n):
-   
-    sequence = [0]
-    seen = {0}  # Set to keep track of numbers already in sequence
-
+    sequence = [0]  
+    seen = {0}  
     for k in range(1, n):
         previous = sequence[-1]
         next_num = previous - k
@@ -16,5 +14,6 @@ def recaman_sequence(n):
             seen.add(next_num)
     
     return sequence
-n = int(input("Enter the length of the Recaman sequence: "))
-sequence = recaman_sequence(n)
+if __name__ == "__main__":
+    sequence = recaman_sequence(32)  
+    print(sequence)
